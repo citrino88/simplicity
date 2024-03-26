@@ -12,3 +12,32 @@
 
 /* como boas prática, bom deixar o font-size da raiz, ie., do html enfatizado no código, para lembrar de alterar por ele, nas variações de tamanho/ responsividade na Medias Queries */
 html { font-size: 16px; }
+
+body {
+    color: var(--cor-texto);
+    font-family: "Noto Sans", sans-serif;
+    background-color: var(--cor-clara);
+}
+
+body, h1, h2, p, figure, nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+img { max-width: 100%; }
+/* importante para não dar barra de rolagem; ie, as imagens ficam variando do seu tamanho para poder estar dentro do enquadramento da tela dos tipos de dispositivos sem ter que aparecer a barra de rolagem */
+
+a { text-decoration: none; }
+
+h1 {
+    font-family: Raleway, sans-serif;
+    text-transform: uppercase;
+    /* se não conseguir usar bold, então usa as intensidades que a fonte oferece, neste caso, para essa fonte, vai de weight 0 a 900, aí o titulo h1 fica mais ou menos preto "intenso" */
+    font-weight: 800;
+    font-size: 1.5rem;
+}
+
+h1 a {
+    color: var(--cor-clara);
+    background-color: var(--cor-escura);
+}
