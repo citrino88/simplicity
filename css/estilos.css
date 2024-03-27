@@ -115,6 +115,12 @@ nav h2 a:hover, nav h2 a:focus, .links-menu a:hover, .links-menu a:focus {
 .destaque h2, .destaque p{
     text-align: center;
     color: var(--cor-clara);
+    /* ETAPA 2 Ver linha da Animação: 
+    ETAPA 2: aplicar a animação*/
+    animation-name: animaDestaque;
+    animation-duration: 2s;
+    /* animation-iteration-count: infinite; se quiser deixar rolando direito infinitamente */
+    /* animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94) ; */
 }
 
 /*  
@@ -140,3 +146,19 @@ nav h2 a:hover, nav h2 a:focus, .links-menu a:hover, .links-menu a:focus {
 .destaque p {
     font-size: clamp(1.5rem,4vw,3rem);   
 }
+
+/* ANIMAÇÃO NO CSS: exemplo o texto descendo, ocorre só uma vez */
+
+/* ETAPA 1)  REGRA DE ANIMAÇÃO */
+/* @keyframes : É um quadro de animação  */
+@keyframes animaDestaque {
+    /* Dê (estado inicial, como começa) */
+    from {
+        opacity: 0;
+        transform: translateY(-500px);
+    }
+
+    /* Para (estado final, como termina) */
+    to { opacity: 1; }
+}
+/* ETAPA 2) VER LINHA */
