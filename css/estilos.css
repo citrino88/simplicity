@@ -40,4 +40,25 @@ h1 {
 h1 a {
     color: var(--cor-clara);
     background-color: var(--cor-escura);
+    padding: 0.3rem 1rem ; /* primeiro valor é top e bottom, o segundo valor é left e right */
+    border-radius: 4px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h2 a {
+    color: var(--cor-escura);
+    font-size: 1.2rem;
+    /* background-color: yellow; usar cores gritantes para ver a área do conteudo/caixa, e podermos ajustar melhor as distancias de padding e/ou talvez margin também. */
+    padding: 1rem;
+    display: inline-block; /* bom usar este valor inline-block com o padding, fica mais bonito */
+}
+
+/* usando seletores agrupado e pseudo-classe */
+nav h2 a:hover, nav h2 a:focus {
+    background-color: var(--cor-intermediaria);
 }
