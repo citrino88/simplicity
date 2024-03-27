@@ -97,3 +97,34 @@ nav h2 a:hover, nav h2 a:focus, .links-menu a:hover, .links-menu a:focus {
     right: 0;
     background-color: var(--cor-clara);
 }
+
+.destaque{
+    height: 500px;
+    /* ../ funciona mesmo fora de um servidor
+    só a barra / só vai funcionar no servidor */
+    background-image: url(../imagens/fundo-destaque.jpg);
+    /* background-attachment deixa a imagem de fundo no modo fixed, fixado, sem ficar andando junto com o rolar da página. VISUALMENTE, opnião própria, deixa o layout de uma página mais bonito. VISUALMENTE, o texto que está acima dele, fica flutuando sobre esse fundo fixado. */
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column; /* funciona como alinhamento vertical, colocando o p debaixo do h2 */
+    justify-content: center;
+    align-items: center; /* funciona como alinhamento horizontal */
+}
+/* Versão 2: regras específicas para o h2 e para o p contidos em destaque */
+.destaque h2, .destaque p{
+    text-align: center;
+    color: var(--cor-clara);
+}
+
+/*  
+    Exercicios
+1) Crie uma regra CSS para formatar o destaque com as seguintes configurações:
+
+- Altura 500px
+- Imagem de fundo (fundo-destaque)
+- Imagem de fundo deve ficar parada
+- Flex com alinhamento totalmente centralizado, e um elemento em cima do outro (ou seja, use o modo coluna)
+
+2) Crie uma regra CSS para formatar o h2 e o p contidos em Destaque. Faça com que os textos fiquem centralizados (text-align) e com cor clara.
+
+ */
