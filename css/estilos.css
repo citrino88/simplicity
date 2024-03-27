@@ -45,6 +45,7 @@ h1 a {
 }
 
 header {
+    height: 12vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -99,7 +100,7 @@ nav h2 a:hover, nav h2 a:focus, .links-menu a:hover, .links-menu a:focus {
 }
 
 .destaque{
-    height: 500px;
+    height: 88vh;
     /* ../ funciona mesmo fora de um servidor
     só a barra / só vai funcionar no servidor */
     background-image: url(../imagens/fundo-destaque.jpg);
@@ -110,7 +111,7 @@ nav h2 a:hover, nav h2 a:focus, .links-menu a:hover, .links-menu a:focus {
     justify-content: center;
     align-items: center; /* funciona como alinhamento horizontal */
 }
-/* Versão 2: regras específicas para o h2 e para o p contidos em destaque */
+/* Versão 2: regras específicas para o h2 e para o p contidos em destaque, poderiamos deixar  */
 .destaque h2, .destaque p{
     text-align: center;
     color: var(--cor-clara);
@@ -128,3 +129,14 @@ nav h2 a:hover, nav h2 a:focus, .links-menu a:hover, .links-menu a:focus {
 2) Crie uma regra CSS para formatar o h2 e o p contidos em Destaque. Faça com que os textos fiquem centralizados (text-align) e com cor clara.
 
  */
+
+ /* FONTES RESPONSIVAS: clamp() 
+ clamp( tamanhoMínimo, tamanhoIdeal/Variável/Responsivo, tamamnhoMáximo )
+ */
+
+ .destaque h2 {
+    font-size: clamp(3rem,10vw,7rem);
+ }
+.destaque p {
+    font-size: clamp(1.5rem,4vw,3rem);   
+}
