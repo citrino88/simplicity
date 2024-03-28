@@ -115,10 +115,10 @@ nav h2 a:hover, nav h2 a:focus, .links-menu a:hover, .links-menu a:focus {
 .destaque h2, .destaque p{
     text-align: center;
     color: var(--cor-clara);
-    /* ETAPA 2 Ver linha da Animação: 
+    /* ETAPA 2 Ver linha 150 a 164 da Animação: 
     ETAPA 2: aplicar a animação*/
     animation-name: animaDestaque;
-    animation-duration: 2s;
+    animation-duration: 1.5s;
     /* animation-iteration-count: infinite; se quiser deixar rolando direito infinitamente */
     /* animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94) ; */
 }
@@ -161,4 +161,28 @@ nav h2 a:hover, nav h2 a:focus, .links-menu a:hover, .links-menu a:focus {
     /* Para (estado final, como termina) */
     to { opacity: 1; }
 }
-/* ETAPA 2) VER LINHA */
+/* ETAPA 2) VER LINHA 118*/
+
+article h2 {
+    padding: 1rem;
+    font-size: 1.4rem;
+    font-family: Raleway, sans-serif;
+    color: var(--cor-titulo)
+}
+
+.front-end, .historia, .localizacao {
+    text-align: center;
+}
+
+article p {
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+}
+
+/* por padrão a tag address vem em itálico, nas linhas abaixo, tiramos esse tipo de estilo. */
+address {
+    font-style: normal;
+    font-size: 1.2rem;
+}
+
+/* Exercício dia 28/03/2024 */
