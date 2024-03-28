@@ -186,3 +186,43 @@ address {
 }
 
 /* Exercício dia 28/03/2024 */
+.historia {
+    height: 50vh;
+    background-image: url(../imagens/fundo-madeira.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    /* o cover é para fazer a imagem cobrir área */
+}
+
+.historia h2 { 
+    color: var(--cor-clara);
+    text-shadow: 5px 5px 2px gray;
+}
+
+.historia iframe {
+    width: 100%;
+    max-width: 700px;
+    margin-bottom: 2rem;
+}
+
+.localizacao iframe {
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.limitador {
+    width: 95vw;
+    margin: auto;
+}
+
+footer {
+    background-color: var(--cor-escura);
+    color: var(--cor-clara);
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0.5rem 2rem;
+    font-weight: bold;
+}
