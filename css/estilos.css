@@ -191,7 +191,7 @@ address {
     background-image: url(../imagens/fundo-madeira.jpg);
     background-attachment: fixed;
     background-size: cover;
-    /* o cover é para fazer a imagem cobrir área */
+    /* o cover é para fazer a imagem cobrir área, e ainda dá uma esticada na imagem. */
 }
 
 .historia h2 { 
