@@ -241,3 +241,43 @@ footer {
     border-bottom: solid 1px;
     margin-bottom: 1rem;
 }
+
+table {
+    border: solid 4px;
+    width: 80%;
+    max-width: 600px;
+    margin: auto;
+    border-collapse: collapse;
+    /* este border-collapse: collapse, tira a "duplicação" que cada célula faz ao colocar a borda. */
+}
+
+caption {
+    text-transform: uppercase;
+    font-size: 2rem;
+    padding-bottom: 0.5rem;
+}
+
+th, td {
+    border: solid 1px;
+}
+
+th {
+    background-color: var(--cor-escura);
+    color: var(--cor-clara);
+    border-color: var(--cor-escura);
+    padding: 0.8rem;
+}
+td {padding: 0.5rem;}
+
+.tdias{
+    text-align: center;
+}
+
+.tvalor{
+    text-align: right;
+}
+
+/* pseudo-classe :nth-child(odd) são pares */
+tr:nth-child(odd){
+    background-color: var(--cor-clara);
+}
