@@ -44,11 +44,17 @@ h1 a {
     border-radius: 4px;
 }
 
-header {
+header .limitador {
     height: 12vh;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: center;    
+}
+
+header {
+    position: sticky;
+    top: 0;
+    background-color: var(--cor-clara);
 }
 
 nav h2 a {
@@ -280,4 +286,50 @@ td {padding: 0.5rem;}
 /* pseudo-classe :nth-child(odd) são pares */
 tr:nth-child(odd){
     background-color: var(--cor-clara);
+}
+
+td:nth-child(2){
+    text-align: center;
+}
+
+th:last-child, td:last-child{
+    text-align: right;
+}
+
+/* Inserindo um conteúdo textual antes (before) de cada valor (td:last-child) */
+
+td:last-child::before{
+    content: "R$ ";
+}
+
+@media screen and (min-width: 570px) {
+    
+    nav h2{
+        display: none;
+    }
+
+    .links-menu {
+        display: flex;        
+        /* faz voltar a aparecer os itens que estavam apagados nos links menus */
+    }
+
+    .links-menu li{
+        width: 100%;
+    }
+
+    nav{
+        width: 60%;
+    }
+
+    .front-end figure img{
+        height: 150px;
+    }
+}
+
+@media screen and (min-width: 1000px){
+    html{ font-size: 18px; }
+
+    .limitador{
+        max-width: 1000px;
+    }
 }
