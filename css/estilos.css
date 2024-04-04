@@ -53,6 +53,7 @@ header .limitador {
 
 header {
     position: sticky;
+    z-index: 100;
     top: 0;
     background-color: var(--cor-clara);
 }
@@ -332,4 +333,24 @@ td:last-child::before{
     .limitador{
         max-width: 1000px;
     }
+
+    /* SERVIÇOS */
+}
+.figure-servicos{
+    margin: auto;
+    text-align: center;
+}
+.figure-servicos img{
+    border-radius: 50%;
+    transform: scale(0.9);
+    filter: brightness(120%) blur(1px);
+
+    
+}
+
+.figure-servicos img:hover{
+    transform: scale(1);
+    transition: 0.5s;
+    border-radius: 10%;
+    filter: none;       
 }
