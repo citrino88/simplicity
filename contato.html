@@ -14,7 +14,7 @@
             <h1>
                 <a href="index.html">Simplicity</a>
             </h1>
-    
+
             <nav>
                 <h2><a href="">Menu &equiv;</a></h2>
                 <!-- daqui alguns dias trocaremos via JS para aberto -->
@@ -29,11 +29,14 @@
     </header>
 
     <main>
-    
+
         <article class="conteudo limitador">
             <h2>Contato</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et autem aliquid sit, unde soluta ut voluptatum? Optio a quo neque magni voluptates expedita qui minima ratione hic, dicta reprehenderit rem quaerat. Consequatur nesciunt quas autem ratione voluptas repellendus in, accusantium natus laudantium quasi totam ea dolorem error voluptatem earum nulla?</p>
-            
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et autem aliquid sit, unde soluta ut voluptatum?
+                Optio a quo neque magni voluptates expedita qui minima ratione hic, dicta reprehenderit rem quaerat.
+                Consequatur nesciunt quas autem ratione voluptas repellendus in, accusantium natus laudantium quasi
+                totam ea dolorem error voluptatem earum nulla?</p>
+
             <!-- metodo é a maneira como os dados serão transmitidos. Opções: get(envia pela URL), post(envia no corpo do formulário [mais seguro para formulários de cadastro em geral, dados sensíveis]) -->
             <!-- <input name=""> ele é importante para as linguagens back-end(exemplo, PHP entre outras) -->
             <!-- autocomplete off é para o formulario não fazer o auto-completar nos campos do formulario, ie, não dá sugestões ao usuário -->
@@ -43,7 +46,7 @@
                 <div>
                     <label for="nome">Nome:</label>
                     <input placeholder="Digite o nome completo" type="text" name="nome" id="nome">
-                </div>    
+                </div>
 
                 <div>
                     <label for="email">E-mail:</label>
@@ -54,6 +57,34 @@
                     <label for="nascimento">Data de nascimento:</label>
                     <input type="date" name="nascimento" id="nascimento">
                 </div>
+
+                <!-- INÍCIO HTML PARA CEP/ENDEREÇO -->
+                <div> 
+                    <label for="cep">CEP: <br><span id="status"></span></label>
+                    <div id="area-do-cep">
+                         <!-- Usamos inputmode numerica para que o teclado virtual mostre números e para que não seja mostrado botões adicionais no navegador desktop.  -->
+                        <input inputmode="numeric" placeholder="Somente números" type="text" id="cep" name="cep" required> 
+                        <br> 
+                        <button id="buscar">Buscar</button> 
+                    </div>
+                </div>
+                <div class="campos-restantes"> 
+                    <label for="endereco">Endereço:</label> 
+                    <input type="text" id="endereco" name="endereco" size="30">
+                </div>
+                <div class="campos-restantes"> 
+                    <label for="bairro">Bairro:</label> 
+                    <input type="text" id="bairro" name="bairro">
+                </div>
+                <div class="campos-restantes"> 
+                    <label for="cidade">Cidade:</label> 
+                    <input type="text" id="cidade" name="cidade">
+                </div>
+                <div class="campos-restantes"> 
+                    <label for="estado">Estado:</label> 
+                    <input type="text" id="estado" name="estado">
+                </div>
+                <!-- /FIM HTML PARA CEP/ENDEREÇO -->
 
                 <div>
                     <label for="telefone">Telefone:</label>
