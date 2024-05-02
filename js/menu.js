@@ -1,6 +1,6 @@
 `use strict`
 
-console.log("menu");
+//console.log("menu");
 
 /* Selecionar o elemento que acionará a lista de links do menu  */
 
