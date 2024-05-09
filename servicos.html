@@ -43,16 +43,16 @@
 
             <!-- data-lightbox é um atributo personalizado, isto é, criado pelo programador, é um atributo como id, class, etc. (estes ultimos nativos do HTML) -->
             <figure class="figure-servicos">
-                <a data-lightbox="fotos" href="imagens/desenvolvimento-web.jpg">
+                <a data-title="Somos especialistas em consultoria e treinamento web" data-lightbox="fotos" href="imagens/desenvolvimento-web.jpg">
                     <img src="imagens/desenvolvimento-web-mini.jpg" alt="">
                 </a>
-                <a data-lightbox="fotos" href="imagens/design-grafico.jpg">
+                <a data-title="Somos especialistas em design gráfico" data-lightbox="fotos" href="imagens/design-grafico.jpg">
                     <img src="imagens/design-grafico-mini.jpg" alt="">
                 </a>
-                <a data-lightbox="fotos" href="imagens/marketing-digital.jpg">
+                <a data-title="Somos especialistas em marketing digital. Profissionais criativos" data-lightbox="fotos" href="imagens/marketing-digital.jpg">
                     <img src="imagens/marketing-digital-mini.jpg" alt="">
                 </a>
-                <a data-lightbox="fotos" href="imagens/consultoria-treinamento.jpg">
+                <a data-title="Seu produto ou empresa será conhecido" data-lightbox="fotos" href="imagens/consultoria-treinamento.jpg">
                     <img src="imagens/consultoria-treinamento-mini.jpg" alt="">
                 </a>
             </figure>
@@ -79,10 +79,22 @@
     </footer>
 
     <!-- bibliotecas sempre vem primeiro, do que plugins, que vem antes também das nossas próprias biblioteca. -->
+    
     <!-- Instalação/Importação da biblioteca jQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    
     <!-- Instalação/Importação do Plugin Lightbox para o JS -->
     <script src="lightbox/js/lightbox.min.js"></script>
+    
+    <!-- Observação abaixo: {objeto com propriedades} dentro de uma (funcao)
+    OBSERVAÇÃO IMPORTANTE: esses números com % não tirar o %-->
+    <script>
+        lightbox.option({
+          resizeDuration: 700, // por padrão está na propria documentação como 700, também achei mais bonito.
+          wrapAround: true,
+          albumLabel: "Imagem %1 de %2"
+        })
+    </script>
 
     <script src="js/menu.js"></script>
 </body>
