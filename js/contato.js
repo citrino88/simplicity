@@ -87,3 +87,37 @@ botaoBuscar.addEventListener("click", async function(event){
     }
 });
 
+/* Script do Formspree */
+// tiramos a var que vinha no original do formspree
+    
+    async function handleSubmit(event) {
+      event.preventDefault();
+      var status = document.getElementById("status-do-envio");
+      var data = new FormData(event.target); //variavel que acessa o formulario e pega tudo lá dentro
+      fetch(event.target.action, {
+        method: formulario.method, // trocamos pela nossa const formulario; e o metodo pega o metodo POST
+        body: data,
+        headers: {
+            'Accept': 'application/json'
+        }
+      }).then(response => {
+        if (response.ok) {
+          status.innerHTML = "Obrigado por seu e-mail, em breve retornaremos! 😀";
+          status.style.color = "blue";
+          formulario.reset()//vamos resetar o nosso const formulario
+        } else {
+          response.json().then(data => {
+            if (Object.hasOwn(data, 'errors')) {
+              status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+            } else {
+              status.innerHTML = "Oops! Houve um erro de envio no seu formulário 😥. Tente novamente"
+              status.style.color = "red";
+            }
+          })
+        }
+      }).catch(error => {
+        status.innerHTML = "Oops! Houve um erro de envio no seu formulário 😥. Tente novamente."
+        status.style.color = "red";
+      });
+    }
+    formulario.addEventListener("submit", handleSubmit) //trocamos para nosso const formulario
